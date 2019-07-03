@@ -3,6 +3,7 @@
 ### Overview
 The goal of this project is to provide a spatial analysis tools for uDig.
 
+![screenshot](https://github.com/mapplus/opengxt-udig-plugin/blob/master/docs/images/architecture.png?width=600)
  
 ### Related Projects
 * [GeoTools](http://geotools.org) is an open source Java library that provides tools for geospatial data. 
@@ -50,6 +51,8 @@ any major spatial data source using open standards.
 
 ### Manual & Documents
 * uDig Processing Toolbox Manual
+  * [Korean v2.0 - 28MB](https://github.com/mapplus/opengxt-udig-plugin/blob/master/docs/manual/uDig_ProcessingToolbox_1.0_User_Manual_ko_v.2.0.pdf)
+  * [Korean v3.x-latest - 35MB](https://github.com/mapplus/opengxt-udig-plugin/blob/master/docs/manual/uDig_ProcessingToolbox_1.0_User_Manual_ko_v.3.latest.pdf)
 
 * Presentation
   * [SlideShare](https://www.slideshare.net/mapplus)
@@ -66,3 +69,4 @@ any major spatial data source using open standards.
 
 ### Gallery
 
+![screenshot](https://github.com/mapplus/opengxt-udig-plugin/blob/master/docs/images/udig_processing_toolbox.png?width=800)
