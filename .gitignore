@@ -1,13 +1,19 @@
+bin
+target
+*.patch
 *.class
+*.pyc
+nb-configuration.xml
+*.*~
 
-# BlueJ files
-*.ctxt
+# ObjectAid Files #
+*.ucls
+model_*.png
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.ear
 
@@ -18,13 +24,37 @@ hs_err_pid*
 # Operating System Files
 # =========================
 
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
 # Windows
 # =========================
 
-# Windows thumbnail cache files
+# Windows image file caches
 Thumbs.db
 ehthumbs.db
-ehthumbs_vista.db
 
 # Folder config file
 Desktop.ini
@@ -38,5 +68,7 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-# Windows shortcuts
-*.lnk
+# uDig
+uDig/org.locationtech.udig.processingtoolbox-site/*.jar
+uDig/org.locationtech.udig.processingtoolbox-site/features/*.jar
+uDig/org.locationtech.udig.processingtoolbox-site/plugins/*.jar
