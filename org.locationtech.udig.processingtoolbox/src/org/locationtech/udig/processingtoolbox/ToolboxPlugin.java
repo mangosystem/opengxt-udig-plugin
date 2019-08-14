@@ -161,7 +161,7 @@ public class ToolboxPlugin extends AbstractUIPlugin {
 
     public static org.eclipse.swt.graphics.Point rescaleSize(Shell parentShell, int width,
             int height) {
-        int scale = (int) parentShell.getDisplay().getDPI().x / 96;
+        int scale = (int) Math.max(parentShell.getDisplay().getDPI().x / 96, 1);
         return new org.eclipse.swt.graphics.Point(width * scale, height * scale);
     }
 }
