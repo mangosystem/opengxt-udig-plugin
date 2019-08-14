@@ -106,7 +106,7 @@ public class ProcessExecutionDialog extends TitleAreaDialog {
         this.factory = factory;
         this.processName = processName;
         this.windowTitle = factory.getTitle(processName).toString();
-        this.scale = (int) parentShell.getDisplay().getDPI().x / 96;
+        this.scale = (int) Math.max(parentShell.getDisplay().getDPI().x / 96, 1);
     }
 
     @Override
@@ -196,6 +196,7 @@ public class ProcessExecutionDialog extends TitleAreaDialog {
             LOGGER.log(Level.WARNING, e.getMessage(), e);
         }
 
+        
         return tab;
     }
 
