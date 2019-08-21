@@ -180,7 +180,7 @@ public class BatchClipFeaturesDialog extends AbstractGeoProcessingDialog impleme
 
                     if (clipped != null) {
                         export.setOutputTypeName(layer.getName());
-                        export.execute(clipFeatures);
+                        export.execute(clipped);
                         ToolboxPlugin.log(file);
                     }
                 }
