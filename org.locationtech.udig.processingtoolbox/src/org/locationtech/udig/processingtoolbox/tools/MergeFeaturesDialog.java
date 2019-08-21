@@ -95,7 +95,6 @@ public class MergeFeaturesDialog extends AbstractGeoProcessingDialog implements
 
         this.windowTitle = Messages.MergeFeaturesDialog_title;
         this.windowDesc = Messages.MergeFeaturesDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 500);
     }
 
     @Override

@@ -80,7 +80,6 @@ public class BatchClipRastersDialog extends AbstractGeoProcessingDialog implemen
 
         this.windowTitle = Messages.BatchClipRastersDialog_title;
         this.windowDesc = Messages.BatchClipRastersDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 500);
     }
 
     @Override

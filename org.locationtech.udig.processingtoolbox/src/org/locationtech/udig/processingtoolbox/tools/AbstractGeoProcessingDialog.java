@@ -28,7 +28,9 @@ import java.util.logging.Logger;
 
 import org.apache.commons.io.IOUtils;
 import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.jface.dialogs.DialogSettings;
 import org.eclipse.jface.dialogs.IDialogConstants;
+import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.TitleAreaDialog;
 import org.eclipse.swt.widgets.Button;
@@ -57,6 +59,7 @@ import org.locationtech.udig.catalog.ICatalog;
 import org.locationtech.udig.catalog.IGeoResource;
 import org.locationtech.udig.catalog.IService;
 import org.locationtech.udig.processingtoolbox.ToolboxPlugin;
+import org.locationtech.udig.processingtoolbox.ToolboxView;
 import org.locationtech.udig.processingtoolbox.internal.ui.OutputDataWidget;
 import org.locationtech.udig.processingtoolbox.internal.ui.WidgetBuilder;
 import org.locationtech.udig.processingtoolbox.styler.MapUtils;
@@ -100,9 +103,6 @@ public abstract class AbstractGeoProcessingDialog extends TitleAreaDialog {
 
     protected String windowDesc = EMPTY;
 
-    protected org.eclipse.swt.graphics.Point windowSize = new org.eclipse.swt.graphics.Point(650,
-            400);
-
     protected OutputDataWidget locationView;
 
     protected String error;
@@ -124,8 +124,11 @@ public abstract class AbstractGeoProcessingDialog extends TitleAreaDialog {
     }
 
     @Override
-    protected org.eclipse.swt.graphics.Point getInitialSize() {
-        return windowSize;
+    protected IDialogSettings getDialogBoundsSettings() {
+        IDialogSettings settings = ToolboxPlugin.getDefault().getDialogSettings();
+        IDialogSettings section = DialogSettings.getOrCreateSection(settings,
+                ToolboxView.PROCESS_DIALOG_SETTINGS);
+        return section;
     }
 
     @Override

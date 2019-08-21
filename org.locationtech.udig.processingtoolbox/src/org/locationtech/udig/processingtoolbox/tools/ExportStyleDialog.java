@@ -74,7 +74,6 @@ public class ExportStyleDialog extends AbstractGeoProcessingDialog implements IR
 
         this.windowTitle = Messages.ExportStyleDialog_title;
         this.windowDesc = Messages.ExportStyleDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 500);
     }
 
     @Override

@@ -88,7 +88,6 @@ public class ExcelToPointDialog extends AbstractGeoProcessingDialog implements
 
         this.windowTitle = Messages.ExcelToPointDialog_title;
         this.windowDesc = Messages.ExcelToPointDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 500);
     }
 
     @Override

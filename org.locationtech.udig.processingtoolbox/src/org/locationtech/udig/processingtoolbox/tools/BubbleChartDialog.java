@@ -119,7 +119,6 @@ public class BubbleChartDialog extends AbstractGeoProcessingDialog implements IR
 
         this.windowTitle = Messages.BubbleChartDialog_title;
         this.windowDesc = Messages.BubbleChartDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 450);
     }
 
     @Override

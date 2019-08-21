@@ -92,7 +92,6 @@ public class TextfileToPointDialog extends AbstractGeoProcessingDialog implement
 
         this.windowTitle = Messages.TextfileToPointDialog_title;
         this.windowDesc = Messages.TextfileToPointDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 500);
     }
 
     @Override

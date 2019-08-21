@@ -94,7 +94,6 @@ public class SplitByFeaturesDialog extends AbstractGeoProcessingDialog implement
 
         this.windowTitle = Messages.SplitByFeaturesDialog_title;
         this.windowDesc = Messages.SplitByFeaturesDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 600);
     }
 
     @Override

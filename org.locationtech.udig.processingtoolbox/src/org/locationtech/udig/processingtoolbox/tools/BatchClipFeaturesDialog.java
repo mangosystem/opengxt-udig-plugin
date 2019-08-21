@@ -67,7 +67,6 @@ public class BatchClipFeaturesDialog extends AbstractGeoProcessingDialog impleme
 
         this.windowTitle = Messages.BatchClipFeaturesDialog_title;
         this.windowDesc = Messages.BatchClipFeaturesDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 500);
     }
 
     @Override

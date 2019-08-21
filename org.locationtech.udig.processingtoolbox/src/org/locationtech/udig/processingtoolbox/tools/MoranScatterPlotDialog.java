@@ -136,7 +136,6 @@ public class MoranScatterPlotDialog extends AbstractGeoProcessingDialog implemen
 
         this.windowTitle = Messages.MoranScatterPlotDialog_title;
         this.windowDesc = Messages.MoranScatterPlotDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 520);
     }
 
     @Override

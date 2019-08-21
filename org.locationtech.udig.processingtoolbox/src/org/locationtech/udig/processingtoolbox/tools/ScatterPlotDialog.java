@@ -109,7 +109,6 @@ public class ScatterPlotDialog extends AbstractGeoProcessingDialog implements IR
 
         this.windowTitle = Messages.ScatterPlotDialog_title;
         this.windowDesc = Messages.ScatterPlotDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 450);
     }
 
     @Override

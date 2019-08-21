@@ -20,6 +20,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.GC;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.ImageData;
+import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Display;
@@ -31,6 +32,7 @@ import org.geotools.brewer.color.ColorBrewer;
 import org.geotools.factory.CommonFactoryFinder;
 import org.geotools.styling.StyleFactory;
 import org.geotools.util.logging.Logging;
+import org.locationtech.udig.processingtoolbox.ToolboxPlugin;
 import org.locationtech.udig.project.ILayer;
 import org.locationtech.udig.project.IMap;
 import org.opengis.filter.FilterFactory2;
@@ -109,14 +111,14 @@ public abstract class AbstractThematicMapDialog extends AbstractGeoProcessingDia
         String paletteName = cboColorRamp.getItem(selIndex).split("\\(")[0]; //$NON-NLS-1$
         BrewerPalette palette = brewer.getPalette(paletteName);
 
-        org.eclipse.swt.graphics.Point size = cboColorRamp.getSize();
-        int width = size.x > 0 ? size.x : windowSize.x - 120;
-        int height = size.y > 0 ? size.y : 32;
-
         java.awt.Color[] colors = palette.getColors();
         if (chkReverse.getSelection()) {
             Collections.reverse(Arrays.asList(colors));
         }
+
+        org.eclipse.swt.graphics.Point size = cboColorRamp.computeSize(SWT.DEFAULT, SWT.DEFAULT);
+        int width = (int) (size.x > 0 ? size.x : getInitialSize().x);
+        int height = (int) (size.y > 0 ? size.y : 32);
 
         Image image = paletteToImage(colors, width, height).createImage();
         lblPreview.setImage(image);

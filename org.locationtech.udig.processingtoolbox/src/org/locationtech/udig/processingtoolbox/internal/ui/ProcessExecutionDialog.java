@@ -17,6 +17,8 @@ import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.eclipse.jface.dialogs.DialogSettings;
+import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.dialogs.TitleAreaDialog;
@@ -88,10 +90,6 @@ public class ProcessExecutionDialog extends TitleAreaDialog {
 
     private boolean outputTabRequired = false;
 
-    private int height = 100;
-
-    private int scale = 1;
-
     private Browser browser;
 
     private CTabItem inputTab, outputTab;
@@ -106,7 +104,6 @@ public class ProcessExecutionDialog extends TitleAreaDialog {
         this.factory = factory;
         this.processName = processName;
         this.windowTitle = factory.getTitle(processName).toString();
-        this.scale = (int) Math.max(parentShell.getDisplay().getDPI().x / 96, 1);
     }
 
     @Override
@@ -118,8 +115,11 @@ public class ProcessExecutionDialog extends TitleAreaDialog {
     }
 
     @Override
-    protected Point getInitialSize() {
-        return new org.eclipse.swt.graphics.Point(650 * scale, height);
+    protected IDialogSettings getDialogBoundsSettings() {
+        IDialogSettings settings = ToolboxPlugin.getDefault().getDialogSettings();
+        IDialogSettings section = DialogSettings.getOrCreateSection(settings,
+                ToolboxView.PROCESS_DIALOG_SETTINGS);
+        return section;
     }
 
     @Override
@@ -155,10 +155,6 @@ public class ProcessExecutionDialog extends TitleAreaDialog {
         // set maximum height
         area.pack();
         parentTabFolder.pack();
-
-        int maxHeight = 500 * scale;
-        height = parent.computeSize(SWT.DEFAULT, SWT.DEFAULT, true).y + (150 * scale);
-        height = height > maxHeight ? maxHeight : height;
 
         return area;
     }

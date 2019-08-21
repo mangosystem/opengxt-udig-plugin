@@ -129,7 +129,6 @@ public class HistogramDialog extends AbstractGeoProcessingDialog implements IRun
 
         this.windowTitle = Messages.HistogramDialog_title;
         this.windowDesc = Messages.HistogramDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 450);
     }
 
     @Override

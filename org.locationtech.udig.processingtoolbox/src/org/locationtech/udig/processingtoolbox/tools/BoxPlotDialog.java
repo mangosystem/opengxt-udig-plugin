@@ -115,7 +115,6 @@ public class BoxPlotDialog extends AbstractGeoProcessingDialog implements IRunna
 
         this.windowTitle = Messages.BoxPlotDialog_title;
         this.windowDesc = Messages.BoxPlotDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 450);
     }
 
     @Override

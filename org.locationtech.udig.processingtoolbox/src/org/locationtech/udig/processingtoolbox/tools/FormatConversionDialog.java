@@ -84,7 +84,6 @@ public class FormatConversionDialog extends AbstractGeoProcessingDialog implemen
 
         this.windowTitle = Messages.FormatConversionDialog_title;
         this.windowDesc = Messages.FormatConversionDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 500);
     }
 
     @SuppressWarnings("nls")

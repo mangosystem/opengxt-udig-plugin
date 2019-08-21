@@ -89,7 +89,6 @@ public class SpatialWeightsMatrixDialog extends AbstractGeoProcessingDialog {
 
         this.windowTitle = Messages.SpatialWeightsMatrixDialog_title;
         this.windowDesc = Messages.SpatialWeightsMatrixDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 475);
     }
 
     @Override

@@ -156,7 +156,6 @@ public class RasterCalculatorDialog extends AbstractGeoProcessingDialog implemen
 
         this.windowTitle = Messages.RasterCalculatorDialog_title;
         this.windowDesc = Messages.RasterCalculatorDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 550);
     }
 
     /**

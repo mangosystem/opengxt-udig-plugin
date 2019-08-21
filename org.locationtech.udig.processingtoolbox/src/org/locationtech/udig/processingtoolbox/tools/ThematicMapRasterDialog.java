@@ -65,7 +65,6 @@ public class ThematicMapRasterDialog extends AbstractThematicMapDialog {
 
         this.windowTitle = Messages.ThematicMapRasterDialog_title;
         this.windowDesc = Messages.ThematicMapRasterDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 550, 320);
     }
 
     @Override
@@ -139,13 +138,6 @@ public class ThematicMapRasterDialog extends AbstractThematicMapDialog {
             }
         });
 
-        cboColorRamp.addModifyListener(new ModifyListener() {
-            @Override
-            public void modifyText(ModifyEvent e) {
-                updatePreview();
-            }
-        });
-
         chkReverse.addListener(SWT.Selection, new Listener() {
             public void handleEvent(Event e) {
                 updatePreview();
@@ -166,8 +158,17 @@ public class ThematicMapRasterDialog extends AbstractThematicMapDialog {
             }
         });
 
-        updateColorRamp(0, 0);
         area.pack(true);
+
+        cboColorRamp.addModifyListener(new ModifyListener() {
+            @Override
+            public void modifyText(ModifyEvent e) {
+                updatePreview();
+            }
+        });
+
+        updateColorRamp(0, 0);
+
         return area;
     }
 

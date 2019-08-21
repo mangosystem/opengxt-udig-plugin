@@ -113,6 +113,8 @@ public class ToolboxView extends ViewPart implements ISetSelectionTarget {
     private static String workspace = null;
     
     private static final String ENV_SETTING = "ENV_SETTING"; //$NON-NLS-1$
+    
+    public static final String PROCESS_DIALOG_SETTINGS = "PROCESS_DIALOG_SETTINGS"; //$NON-NLS-1$
 
     private static IDialogSettings settings;
 

@@ -78,7 +78,6 @@ public class BatchReprojectFeaturesDialog extends AbstractGeoProcessingDialog im
 
         this.windowTitle = Messages.BatchReprojectFeaturesDialog_title;
         this.windowDesc = Messages.BatchReprojectFeaturesDialog_description;
-        this.windowSize = ToolboxPlugin.rescaleSize(parentShell, 650, 500);
     }
 
     @Override
