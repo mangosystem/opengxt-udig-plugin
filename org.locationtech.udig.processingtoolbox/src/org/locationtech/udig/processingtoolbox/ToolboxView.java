@@ -594,6 +594,7 @@ public class ToolboxView extends ViewPart implements ISetSelectionTarget {
         TreeParent aggreTool = new TreeParent(Messages.ToolboxView_Aggregation, null, null);
         generalTool.addChild(aggreTool);
         buildTool(aggreTool, "org.geotools.process.spatialstatistics.CollectEventsProcessFactory");
+        buildTool(aggreTool, "org.geotools.process.spatialstatistics.CollectFeaturesProcessFactory");
         buildTool(aggreTool, "org.geotools.process.spatialstatistics.BufferStatisticsProcessFactory");
         buildTool(aggreTool, "org.geotools.process.spatialstatistics.DissolveProcessFactory");
         buildTool(aggreTool, "org.geotools.process.spatialstatistics.UnionPolygonProcessFactory");
